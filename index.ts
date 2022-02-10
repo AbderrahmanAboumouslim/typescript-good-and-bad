@@ -22,6 +22,7 @@ const videoGamePlayer = {
   name: "Abderrahman",
 };
 
+// if are'nt returning we use :void
 const dataPlayer = (videoGamePlayer: {
   date: Date;
   exp: number;
@@ -45,3 +46,26 @@ const dataPlayerDistructioned = ({
   console.log(exp);
   console.log(name);
 };
+
+// OBJECTS
+const user = {
+  name: "abderrahman",
+  rank: "gold",
+  level: 75,
+  location: {
+    x: 230,
+    y: 49,
+  },
+  previousLevel(level: number): number {
+    return (this.level = level - 1);
+  },
+};
+// good
+const { level, rank }: { level: number; rank: string } = user;
+
+// bad
+// const {level} : number = user;
+
+const {
+  location: { x, y },
+}: { location: { x: number; y: number } } = user;
