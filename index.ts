@@ -69,3 +69,27 @@ const { level, rank }: { level: number; rank: string } = user;
 const {
   location: { x, y },
 }: { location: { x: number; y: number } } = user;
+
+/////////////////////////////////////////////////////////
+////// function + interface + object + distraction//////
+
+interface Profile {
+  describe(): string;
+}
+
+const developer = {
+  name: "Abderrahman",
+  useJavaScript: true,
+  repos: 40,
+  famousLang: "javascript",
+  date: new Date(),
+  describe(): string {
+    return `${this.name} is very addicted to coding and mostly using ${this.famousLang}, and his GitHub has ${this.repos} repositories.`;
+  },
+};
+
+const getProfile = (profile: Profile): void => {
+  console.log(profile.describe());
+};
+
+getProfile(developer);
