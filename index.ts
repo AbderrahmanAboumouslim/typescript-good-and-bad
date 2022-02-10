@@ -31,4 +31,17 @@ const dataPlayer = (videoGamePlayer: {
   console.log(videoGamePlayer.exp);
   console.log(videoGamePlayer.name);
 };
-dataPlayer(videoGamePlayer);
+
+const dataPlayerDistructioned = ({
+  date,
+  exp,
+  name,
+}: {
+  date: Date;
+  exp: number;
+  name: string;
+}): void => {
+  console.log(date);
+  console.log(exp);
+  console.log(name);
+};
