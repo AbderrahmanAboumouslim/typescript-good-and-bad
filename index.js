@@ -1,12 +1,25 @@
+"use strict";
+exports.__esModule = true;
 // bad
-var multiA = function (a, b) {
-    a + b;
-};
+// const multiA = (a: number, b: number) => {
+//   a + b;
+// };
 // bad
-var multiB = function (a, b) {
-    a + b;
-};
-// bad
+// const multiB = (a: number, b: number): number => {
+//   a + b;
+// };
+// good
 var multiC = function (a, b) {
     return a + b;
+};
+// distruction
+var videoGamePlayer = {
+    date: new Date(),
+    exp: 20,
+    name: "Abderrahman"
+};
+var dataPlayer = function (videoGamePlayer) {
+    console.log(videoGamePlayer.date);
+    console.log(videoGamePlayer.exp);
+    console.log(videoGamePlayer.name);
 };
