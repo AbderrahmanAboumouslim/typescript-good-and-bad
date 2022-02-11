@@ -88,8 +88,18 @@ const developer = {
   },
 };
 
+const gamer = {
+  name: "Aboumouslim",
+  isPlaying: true,
+  level: 599,
+  describe(): string {
+    return `${this.name} is a good gamer with level of ${this.level}`;
+  },
+};
+
 const getProfile = (profile: Profile): void => {
   console.log(profile.describe());
 };
 
 getProfile(developer);
+getProfile(gamer);
